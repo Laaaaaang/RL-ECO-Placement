@@ -1,0 +1,21 @@
+run_dir: "runs/eco_ppo_mock"
+model:
+  hidden: 128        # 隐层大小
+action_space:
+  top_k: 128
+  x_bins: 64
+  y_bins: 64
+opt:
+  lr: 3.0e-4
+  wd: 0.0
+ppo:
+  gamma: 0.99
+  lam: 0.95
+  clip_ratio: 0.2
+  vf_coef: 0.5
+  ent_coef: 0.01
+  update_epochs: 2
+  batch_size: 256
+  max_grad_norm: 1.0
+steps_per_rollout: 64
+updates: 10
